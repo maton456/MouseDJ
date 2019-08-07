@@ -19,12 +19,12 @@ python MouseDJ.py
 - PyAutoGUI 0.9.47
 - PyAudio 0.2.11
 
-WindowsならAnacondaをインストールして、Anaconda Promptでcondaコマンドを使ってライブラリをインストールすればOK。 If you are a Windows user, install Anaconda, and install the libraries with conda command on Anaconda Prompt.
+Windowsなら[Anaconda](https://www.anaconda.com/)をインストールして、Anaconda Promptでcondaコマンドを使ってライブラリをインストールすればOK。 If you are a Windows user, install [Anaconda](https://www.anaconda.com/), and install the libraries with conda commands on Anaconda Prompt.
 ```
 conda install -c conda-forge pyautogui 
 conda install pyaudio
 ```
-Anacondaを使わない人は、普通にpipでいけると思う。 If you don't use Anaconda, instal the libraries with pip command.
+Anacondaを使わない人は、普通にpipでいけると思う。 If you don't use Anaconda, instal the libraries with pip commands.
 ```
 pip install pyautogui
 pip install pyaudio
