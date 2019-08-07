@@ -29,5 +29,8 @@ Anacondaを使わない人は、普通にpipでいけると思う。 If you don'
 pip install pyautogui
 pip install pyaudio
 ```
+**動画 Movie**<br>
+[Twitter](https://twitter.com/Highso_ciety/status/1158007923013902336)
+
 **解説 Description**<br>
 ブログ記事作成中 Under writing a blog post
