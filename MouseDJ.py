@@ -39,6 +39,8 @@ def play_tone(stream, length=1, rate=44100):
     sound_freq_old = sound_freq
     phaze_start = 0
     while thread_2_flag:
+        if sound_freq_old == sound_freq:
+            continue
         chunks = []
         ret, phaze_last = make_time_varying_sine(sound_freq_old, sound_freq, A, fs, sampling/1000, phaze_start)
         chunks.append(ret)
