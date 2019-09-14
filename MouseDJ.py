@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Aug  4 17:53:05 2019
-
 @author: maton456
 """
 
@@ -36,13 +35,20 @@ def play_tone(stream, length=1, rate=44100):
     #オーディオを鳴らす
     global sound_freq
     count = 0
+    count2 = 0
+    count2_th = 0.05 #マウスが止まったときのノイズ音を許容する時間(秒)
+    count2_limit = count2_th / length
     sound_freq_old = sound_freq
     phaze_start = 0
     while thread_2_flag:
-        if sound_freq_old == sound_freq:
-            continue
+        count2 = count2 + 1
+        if sound_freq != sound_freq_old:
+            count2 = 0
+        else:
+            if count2 > count2_limit:
+                continue
         chunks = []
-        ret, phaze_last = make_time_varying_sine(sound_freq_old, sound_freq, A, fs, sampling/1000, phaze_start)
+        ret, phaze_last = make_time_varying_sine(sound_freq_old, sound_freq, A, fs, length, phaze_start)
         chunks.append(ret)
         chunk = numpy.concatenate(chunks)
         #print("sound_freq:" + str(sound_freq) + "sound_freq_old:" + str(sound_freq_old))
@@ -69,6 +75,7 @@ def read_mouse(sensitivity=10, bias=196):
             continue
         #print('MOVE')
         sound_freq = round(move_len*sensitivity + bias)
+        print('sound_freq = ' + str(sound_freq))
         w_0, h_0 = w_1, h_1
         #time.sleep(0.001)
         #elapsed_time = time.time() - start
@@ -102,4 +109,3 @@ if __name__ == '__main__':
     #スレッド修了
     thread_1_flag = False
     thread_2_flag = False
-
