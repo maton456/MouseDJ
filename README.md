@@ -30,7 +30,9 @@ pip install pyautogui
 pip install pyaudio
 ```
 **動画 Movie**<br>
+[Youtube](https://www.youtube.com/watch?v=l7zffDBSK-M&t=1s)
 [Twitter](https://twitter.com/Highso_ciety/status/1158007923013902336)
 
+
 **解説 Description**<br>
-ブログ記事作成中 Under writing a blog post
+[Blog](https://highso.hatenablog.com/entry/2019/08/11/210000)
