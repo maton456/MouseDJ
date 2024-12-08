@@ -6,29 +6,19 @@
 パソコンさえあれば、どんなマウスでもOK！ All you have to do is preparing a mouse and a computer.<br>
 あなたもマウスDJ、始めませんか？ Shall we begin your mouse DJ life?
 ## 使い方 How to use
-### First ver.
-[MouseDJ.py](https://github.com/maton456/MouseDJ/blob/master/MouseDJ.py)をてきとうなディレクトリに保存して実行するだけ！ Downloed [MouseDJ.py](https://github.com/maton456/MouseDJ/blob/master/MouseDJ.py) to your local PC, and run it!
 ```
+clone https://github.com/maton456/MouseDJ.git
+pip install -r requirements.txt
 python MouseDJ.py
 ```
 マウスを動かして、DJサウンドを楽しみましょう。 Enjoy Mouse DJ sound with moving your mouse.
 
 **動作環境 Requirements**<br>
 以下の環境で動作確認 I confirmed to work in the following environments.
-- Python 3.7
-- PyAutoGUI 0.9.47
-- PyAudio 0.2.11
+- Python==3.13.1
+- pyautogui==0.9.54
+- pyaudio==0.2.14
 
-Windowsなら[Anaconda](https://www.anaconda.com/)をインストールして、Anaconda Promptでcondaコマンドを使ってライブラリをインストールすればOK。 If you are a Windows user, install [Anaconda](https://www.anaconda.com/), and install the libraries with conda commands on Anaconda Prompt.
-```
-conda install -c conda-forge pyautogui 
-conda install pyaudio
-```
-Anacondaを使わない人は、普通にpipでいけると思う。 If you don't use Anaconda, instal the libraries with pip commands.
-```
-pip install pyautogui
-pip install pyaudio
-```
 **デモ動画 Demo movie**<br>
 [Youtube](https://www.youtube.com/watch?v=l7zffDBSK-M&t=1s)
 
